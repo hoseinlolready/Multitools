@@ -36,7 +36,7 @@ while true; do
 
   case $option in
       0)
-      echo -e "${CYAN}👉 Running Optivpn...${RESET}"
+      echo -e "${CYAN}👉 Updating and installing tools...${RESET}"
       apt update -y && apt install sudo curl wget tmate nano -y
       ;;
     1)
