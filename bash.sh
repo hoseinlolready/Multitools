@@ -17,6 +17,7 @@ while true; do
   echo "          🌐 Version $SCRIPT_VERSION     "
   echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
   echo -e "${RESET}"
+  echo -e "${YELLOW}0)${RESET}  🌀 ${GREEN}Update & tools${RESET}"
   echo -e "${YELLOW}1)${RESET}  🚀 ${GREEN}Optivpn${RESET}"
   echo -e "${YELLOW}2)${RESET}  🛡️  ${GREEN}Marzban Installer${RESET}"
   echo -e "${YELLOW}3)${RESET}  ⚙️  ${GREEN}X-ui (Sanaie)${RESET}"
@@ -34,6 +35,10 @@ while true; do
   option=${option:-1}
 
   case $option in
+      0)
+      echo -e "${CYAN}👉 Running Optivpn...${RESET}"
+      apt update -y && apt install sudo curl wget tmate nano -y
+      ;;
     1)
       echo -e "${CYAN}👉 Running Optivpn...${RESET}"
       sudo bash <(curl -Ls https://raw.githubusercontent.com/hoseinlolready/panel/refs/heads/main/Optivpn)
